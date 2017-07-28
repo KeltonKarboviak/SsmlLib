@@ -10,3 +10,13 @@ env:
 script:  # Build
   - xbuild /p:Configuration=Release SsmlLibraries.sln
   - mono packages/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./SsmlLib.Tests/bin/Release/SsmlLib.Tests.dll
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+  local_dir: docs/_site
+  target_branch: gh-pages
+  email: kelton.karboviak@gmail.com
