@@ -1,27 +1,27 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SsmlLib.Enums;
-using System;
-
-namespace SsmlLib.Tests.SsmlBuilderTests
+﻿namespace SsmlLib.Tests.SsmlBuilderTests
 {
-    [TestClass]
+    using NUnit.Framework;
+    using SsmlLib.Enums;
+    using System;
+
+    [TestFixture(Author = "Kelton Karboviak", TestOf = typeof(SsmlBuilder))]
     public class SsmlBuilderUnitTests
     {
-        SsmlBuilder builder;
+        private SsmlBuilder builder;
 
-        [TestInitialize]
+        [SetUp]
         public void InitializeEmptySsmlBuilderObject()
         {
             builder = new SsmlBuilder();
         }
 
-        [TestCleanup]
+        [TearDown]
         public void CleanupSsmlBuilderObject()
         {
             builder = null;
         }
 
-        [TestMethod()]
+        [Test]
         public void Say_WithNonEmptyString_AppendsStringToSpeakTag()
         {
             // arrange
@@ -40,7 +40,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML raw text not appended correctly.");
         }
 
-        [TestMethod()]
+        [Test]
         public void Say_WithEmptyString_AppendsEmptyStringToSpeakTag()
         {
             // arrange
@@ -59,7 +59,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML raw text not appended correctly.");
         }
 
-        [TestMethod()]
+        [Test]
         public void Say_WithXmlSpecialChars_AppendsEscapedStringToSpeakTag()
         {
             // arrange
@@ -78,7 +78,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML raw text not appended correctly.");
         }
 
-        [TestMethod]
+        [Test]
         public void Sentence_WithNonEmptyString_AppendsSentenceTagToSpeakTag()
         {
             // arrange
@@ -97,7 +97,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML <s> tag not appended correctly.");
         }
 
-        [TestMethod]
+        [Test]
         public void Sentence_WithEmptyString_AppendsEmptySentenceTagToSpeakTag()
         {
             // arrange
@@ -116,7 +116,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML <s> tag not appended correctly.");
         }
 
-        [TestMethod]
+        [Test]
         public void BreakByDuration_WithValidDurationStringSeconds_AppendsBreakTagWithTimeAttributeToSpeakTag()
         {
             // arrange
@@ -135,7 +135,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML <break> tag not appended correctly.");
         }
 
-        [TestMethod]
+        [Test]
         public void BreakByDuration_WithInvalidDurationStringExceedsSeconds_ShouldThrowArgumentException()
         {
             // arrange
@@ -149,14 +149,14 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             catch (ArgumentException e)
             {
                 // assert
-                StringAssert.Contains(e.Message, SsmlBuilder.BreakDurationExceedsSecondsMessage);
+                StringAssert.Contains(SsmlBuilder.BreakDurationExceedsSecondsMessage, e.Message);
                 return;
             }
 
             Assert.Fail();
         }
 
-        [TestMethod]
+        [Test]
         public void BreakByDuration_WithValidDurationStringMilliseconds_AppendsBreakTagWithTimeAttributeToSpeakTag()
         {
             // arrange
@@ -175,7 +175,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML <break> tag not appended correctly.");
         }
 
-        [TestMethod]
+        [Test]
         public void BreakByDuration_WithInvalidDurationStringExceedsMilliseconds_ShouldThrowArgumentException()
         {
             // arrange
@@ -189,14 +189,14 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             catch (ArgumentException e)
             {
                 // assert
-                StringAssert.Contains(e.Message, SsmlBuilder.BreakDurationExceedsMillisecondsMessage);
+                StringAssert.Contains(SsmlBuilder.BreakDurationExceedsMillisecondsMessage, e.Message);
                 return;
             }
 
             Assert.Fail();
         }
 
-        [TestMethod]
+        [Test]
         public void BreakByDuration_WithInvalidDurationStringDoesNotMatchRegex_ShouldThrowArgumentException()
         {
             // arrange
@@ -210,14 +210,14 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             catch (ArgumentException e)
             {
                 // assert
-                StringAssert.Contains(e.Message, SsmlBuilder.BreakDurationDoesNotMatchRegexMessage);
+                StringAssert.Contains(SsmlBuilder.BreakDurationDoesNotMatchRegexMessage, e.Message);
                 return;
             }
 
             Assert.Fail();
         }
 
-        [TestMethod]
+        [Test]
         public void BreakByStrength_WithValidBreakStrength_AppendsBreakTagWithStrengthAttributeToSpeakTag()
         {
             // arrange
@@ -236,7 +236,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML <break> tag not appended correctly.");
         }
 
-        [TestMethod]
+        [Test]
         public void SayAs_WithNonEmptyStringAndValidInterpretAndDefaultFormat_AppendsSayAsTagWithInterpretAsAttributeToSpeakTag()
         {
             // arrange
@@ -255,7 +255,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML <say-as> tag not appended correctly.");
         }
 
-        [TestMethod]
+        [Test]
         public void SayAs_WithNonEmptyStringAndValidInterpretAndValidFormat_AppendsSayAsTagWithInterpretAsAndFormatAttributesToSpeakTag()
         {
             // arrange
@@ -274,7 +274,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML <say-as> tag not appended correctly.");
         }
 
-        [TestMethod]
+        [Test]
         public void SayAs_WithEmptyStringAndValidInterpretAndDefaultFormat_AppendsSayAsTagWithEmptyStringAndInterpretAsAttributeToSpeakTag()
         {
             // arrange
@@ -293,7 +293,7 @@ namespace SsmlLib.Tests.SsmlBuilderTests
             Assert.AreEqual(expected, actual, "SSML <say-as> tag not appended correctly.");
         }
 
-        [TestMethod]
+        [Test]
         public void SayAs_WithEmptyStringAndValidInterpretAndValidFormat_AppendsSayAsTagWithEmptyStringAndInterpretAsAndFormatAttributesToSpeakTag()
         {
             // arrange

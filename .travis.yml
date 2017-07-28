@@ -4,4 +4,5 @@ mono: latest
 sudo: false
 dist: trusty
 env:
-  - DOTNETCORE=1 DOCFX_SOURCE_BRANCH_NAME=$TRAVIS_BRANCH
+  global:
+    - DOCFX_SOURCE_BRANCH_NAME=$TRAVIS_BRANCH
