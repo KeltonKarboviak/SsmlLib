@@ -1,6 +1,7 @@
 language: csharp
+solution: SsmlLibraries.sln
+mono: latest
 sudo: false
 dist: trusty
 env:
-  - DOTNETCORE=1
-  - DOCFX_SOURCE_BRANCH_NAME=$TRAVIS_BRANCH
+  - DOTNETCORE=1 DOCFX_SOURCE_BRANCH_NAME=$TRAVIS_BRANCH
