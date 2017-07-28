@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{4B47C1E0-DCE1-4CB2-8612-352327CFD90E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SsmlLib", "SsmlLib\SsmlLib.csproj", "{4B47C1E0-DCE1-4CB2-8612-352327CFD90E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SsmlLib.Tests", "SsmlLib.Tests\SsmlLib.Tests.csproj", "{B14963BF-2F66-4C02-8A69-73B85A738673}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4B47C1E0-DCE1-4CB2-8612-352327CFD90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B47C1E0-DCE1-4CB2-8612-352327CFD90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B47C1E0-DCE1-4CB2-8612-352327CFD90E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B14963BF-2F66-4C02-8A69-73B85A738673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B14963BF-2F66-4C02-8A69-73B85A738673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B14963BF-2F66-4C02-8A69-73B85A738673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B14963BF-2F66-4C02-8A69-73B85A738673}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
