@@ -13,4 +13,4 @@ install:  # Install dependencies
 
 script:  # Build
   - xbuild /p:Configuration=Release SsmlLibraries.sln
-  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit-console.exe ./SsmlLib.Tests/bin/Release/SsmlLib.Tests.dll
+  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit3-console.exe ./SsmlLib.Tests/bin/Release/SsmlLib.Tests.dll
