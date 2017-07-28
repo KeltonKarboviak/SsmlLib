@@ -6,3 +6,11 @@ dist: trusty
 env:
   global:
     - DOCFX_SOURCE_BRANCH_NAME=$TRAVIS_BRANCH
+
+install:  # Install dependencies
+  - nuget restore SsmlLibraries.sln
+  - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
+
+script:  # Build
+  - xbuild /p:Configuration=Release SsmlLibraries.sln
+  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit-console.exe ./SsmlLib.Tests/bin/Release/SsmlLib.Tests.dll
