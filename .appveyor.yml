@@ -11,7 +11,7 @@ branches:
     - gh-pages
 
 skip_commits:
-  message: /\[skip CI\]/  # Regex for matching commit message
+  message: /\[skip (ci|AppVeyor)\]/  # Regex for matching commit message
 
 #---------------------------------#
 #    environment configuration    #
@@ -38,6 +38,9 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}-rc1'
 
+install:
+  - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+
 #---------------------------------#
 #       build configuration       #
 #---------------------------------#
@@ -47,6 +50,9 @@ platform: Any CPU
 
 # build Configuration, i.e. Debug, Release, etc.
 configuration: Release
+
+before_build:
+  - appveyor-retry nuget restore
 
 build:
   parallel: true
@@ -67,6 +73,13 @@ test_script:
 #---------------------------------#
 #      artifacts configuration    #
 #---------------------------------#
+
+artifacts:
+  # pushing entire folder as a zip archive
+  - path: logs
+
+  # pushing all *.nupkg files in build directory recursively
+  - path: '**\*.nupkg'
 
 #---------------------------------#
 #         notifications           #
