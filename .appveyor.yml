@@ -68,7 +68,7 @@ build:
 #---------------------------------#
 
 test_script:
-  - ./packages/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./SsmlLib.Tests/bin/Release/SsmlLib.Tests.dll
+  - packages\NUnit.ConsoleRunner.3.7.0\tools\nunit3-console.exe SsmlLib.Tests\bin\Release\SsmlLib.Tests.dll
 
 #---------------------------------#
 #      artifacts configuration    #
