@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SsmlBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SsmlBuilder
+   ">
+    <meta name="generator" content="docfx 2.21.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SsmlLib.SsmlBuilder">
+  
+  
+  <h1 id="SsmlLib_SsmlBuilder" data-uid="SsmlLib.SsmlBuilder" class="text-break">Class SsmlBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>This class helps simplify creating SSML (Speech Synthesis Markup Language) using the builder pattern.
+This only supports a subset of SSML tags that Cortana devices support.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SsmlBuilder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SsmlLib.html">SsmlLib</a></h6>
+  <h6><strong>Assembly</strong>: SsmlLib.dll</h6>
+  <h5 id="SsmlLib_SsmlBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SsmlBuilder</code></pre>
+  </div>
+  <h5 id="SsmlLib_SsmlBuilder_examples"><strong>Examples</strong></h5>
+  <pre><code>var speech = new SSMLBuilder().Say(&quot;Hello, world!&quot;).BreakByDuration(&quot;1s&quot;).Say(&quot;My name is Joe.&quot;).ToString();</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder__ctor.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L74">View Source</a>
+  </span>
+  <a id="SsmlLib_SsmlBuilder__ctor_" data-uid="SsmlLib.SsmlBuilder.#ctor*"></a>
+  <h4 id="SsmlLib_SsmlBuilder__ctor" data-uid="SsmlLib.SsmlBuilder.#ctor">SsmlBuilder()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SsmlLib.SsmlBuilder.html">SsmlBuilder</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SsmlBuilder()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder__ctor_System_String_.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L83">View Source</a>
+  </span>
+  <a id="SsmlLib_SsmlBuilder__ctor_" data-uid="SsmlLib.SsmlBuilder.#ctor*"></a>
+  <h4 id="SsmlLib_SsmlBuilder__ctor_System_String_" data-uid="SsmlLib.SsmlBuilder.#ctor(System.String)">SsmlBuilder(String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SsmlLib.SsmlBuilder.html">SsmlBuilder</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SsmlBuilder(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The raw text to insert into the speak tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_BreakDurationDoesNotMatchRegexMessage.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.BreakDurationDoesNotMatchRegexMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L22">View Source</a>
+  </span>
+  <h4 id="SsmlLib_SsmlBuilder_BreakDurationDoesNotMatchRegexMessage" data-uid="SsmlLib.SsmlBuilder.BreakDurationDoesNotMatchRegexMessage">BreakDurationDoesNotMatchRegexMessage</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BreakDurationDoesNotMatchRegexMessage = &quot;The duration must be a number followed by either 's' for second or 'ms' for milliseconds. e.g., 10s or 100ms. Max duration is 10 seconds (10000 milliseconds).&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_BreakDurationExceedsMillisecondsMessage.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.BreakDurationExceedsMillisecondsMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L21">View Source</a>
+  </span>
+  <h4 id="SsmlLib_SsmlBuilder_BreakDurationExceedsMillisecondsMessage" data-uid="SsmlLib.SsmlBuilder.BreakDurationExceedsMillisecondsMessage">BreakDurationExceedsMillisecondsMessage</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BreakDurationExceedsMillisecondsMessage = &quot;The break duration exceeds the allowed 10,000 milliseconds duration.&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_BreakDurationExceedsSecondsMessage.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.BreakDurationExceedsSecondsMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L20">View Source</a>
+  </span>
+  <h4 id="SsmlLib_SsmlBuilder_BreakDurationExceedsSecondsMessage" data-uid="SsmlLib.SsmlBuilder.BreakDurationExceedsSecondsMessage">BreakDurationExceedsSecondsMessage</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BreakDurationExceedsSecondsMessage = &quot;The break duration exceeds the allowed 10 second duration.&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_SsmlLanguage.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.SsmlLanguage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L28">View Source</a>
+  </span>
+  <h4 id="SsmlLib_SsmlBuilder_SsmlLanguage" data-uid="SsmlLib.SsmlBuilder.SsmlLanguage">SsmlLanguage</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string SsmlLanguage</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_SsmlNameSpace.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.SsmlNameSpace%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L27">View Source</a>
+  </span>
+  <h4 id="SsmlLib_SsmlBuilder_SsmlNameSpace" data-uid="SsmlLib.SsmlBuilder.SsmlNameSpace">SsmlNameSpace</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly XNamespace SsmlNameSpace</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XNamespace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_SsmlVersion.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.SsmlVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L26">View Source</a>
+  </span>
+  <h4 id="SsmlLib_SsmlBuilder_SsmlVersion" data-uid="SsmlLib.SsmlBuilder.SsmlVersion">SsmlVersion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string SsmlVersion</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_BreakByDuration_System_String_.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.BreakByDuration(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L133">View Source</a>
+  </span>
+  <a id="SsmlLib_SsmlBuilder_BreakByDuration_" data-uid="SsmlLib.SsmlBuilder.BreakByDuration*"></a>
+  <h4 id="SsmlLib_SsmlBuilder_BreakByDuration_System_String_" data-uid="SsmlLib.SsmlBuilder.BreakByDuration(System.String)">BreakByDuration(String)</h4>
+  <div class="markdown level1 summary"><p>Creates and appends a &lt;break&gt; tag into the &lt;speak&gt; tag that will pause the audio based upon the duration provided. This method will also ensure the break duration conforms to the duration restrictions.
+<p>
+See <a href="https://docs.microsoft.com/en-us/cortana/reference/ssml#break-element">https://docs.microsoft.com/en-us/cortana/reference/ssml#break-element</a>
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SsmlBuilder BreakByDuration(string duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The duration represented by a number + either &apos;s&apos; for second or &apos;ms&apos; for milliseconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SsmlLib.SsmlBuilder.html">SsmlBuilder</a></td>
+        <td><p>Returns <code>this</code> SSMLBuilder instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_BreakByStrength_SsmlLib_Enums_BreakStrengthOptions_.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.BreakByStrength(SsmlLib.Enums.BreakStrengthOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L172">View Source</a>
+  </span>
+  <a id="SsmlLib_SsmlBuilder_BreakByStrength_" data-uid="SsmlLib.SsmlBuilder.BreakByStrength*"></a>
+  <h4 id="SsmlLib_SsmlBuilder_BreakByStrength_SsmlLib_Enums_BreakStrengthOptions_" data-uid="SsmlLib.SsmlBuilder.BreakByStrength(SsmlLib.Enums.BreakStrengthOptions)">BreakByStrength(BreakStrengthOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates and appends a &lt;break&gt; tag into the &lt;speak&gt; tag that will pause the audio based upon the strength provided.
+<p>
+See <a href="https://docs.microsoft.com/en-us/cortana/reference/ssml#break-element">https://docs.microsoft.com/en-us/cortana/reference/ssml#break-element</a>
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SsmlBuilder BreakByStrength(BreakStrengthOptions strength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SsmlLib.Enums.BreakStrengthOptions.html">BreakStrengthOptions</a></td>
+        <td><span class="parametername">strength</span></td>
+        <td><p>The strength represented as a value from the BreakStrengthOptions enum.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SsmlLib.SsmlBuilder.html">SsmlBuilder</a></td>
+        <td><p>Returns <code>this</code> SSMLBuilder instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_Say_System_String_.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.Say(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L100">View Source</a>
+  </span>
+  <a id="SsmlLib_SsmlBuilder_Say_" data-uid="SsmlLib.SsmlBuilder.Say*"></a>
+  <h4 id="SsmlLib_SsmlBuilder_Say_System_String_" data-uid="SsmlLib.SsmlBuilder.Say(System.String)">Say(String)</h4>
+  <div class="markdown level1 summary"><p>This appends raw text into the &lt;speak&gt; tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SsmlBuilder Say(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The raw text to insert into the speak tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SsmlLib.SsmlBuilder.html">SsmlBuilder</a></td>
+        <td><p>Returns <code>this</code> SSMLBuilder instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_SayAs_System_String_SsmlLib_Enums_InterpretAsOptions_System_String_.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.SayAs(System.String%2CSsmlLib.Enums.InterpretAsOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L193">View Source</a>
+  </span>
+  <a id="SsmlLib_SsmlBuilder_SayAs_" data-uid="SsmlLib.SsmlBuilder.SayAs*"></a>
+  <h4 id="SsmlLib_SsmlBuilder_SayAs_System_String_SsmlLib_Enums_InterpretAsOptions_System_String_" data-uid="SsmlLib.SsmlBuilder.SayAs(System.String,SsmlLib.Enums.InterpretAsOptions,System.String)">SayAs(String, InterpretAsOptions, String)</h4>
+  <div class="markdown level1 summary"><p>Creates and appends a &lt;say-as&gt; tag into the &lt;speak&gt; tag that has multiple attributes such as interpret-as and format.
+<p>
+See <a href="https://docs.microsoft.com/en-us/cortana/reference/ssml#say-as-element">https://docs.microsoft.com/en-us/cortana/reference/ssml#say-as-element</a>
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SsmlBuilder SayAs(string text, InterpretAsOptions interpret, string format = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The raw text to be interpreted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SsmlLib.Enums.InterpretAsOptions.html">InterpretAsOptions</a></td>
+        <td><span class="parametername">interpret</span></td>
+        <td><p>The interpret-as attribute that indicates the content type of text contained in the element.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format attribute that provides additional information about the precise formatting of the text contained in the element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SsmlLib.SsmlBuilder.html">SsmlBuilder</a></td>
+        <td><p>Returns <code>this</code> SSMLBuilder instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_Sentence_System_String_.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.Sentence(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L116">View Source</a>
+  </span>
+  <a id="SsmlLib_SsmlBuilder_Sentence_" data-uid="SsmlLib.SsmlBuilder.Sentence*"></a>
+  <h4 id="SsmlLib_SsmlBuilder_Sentence_System_String_" data-uid="SsmlLib.SsmlBuilder.Sentence(System.String)">Sentence(String)</h4>
+  <div class="markdown level1 summary"><p>Creates and appends a &lt;s&gt; tag into the &lt;speak&gt; tag.
+<p>
+See <a href="https://docs.microsoft.com/en-us/cortana/reference/ssml#p-and-s-elements">https://docs.microsoft.com/en-us/cortana/reference/ssml#p-and-s-elements</a>
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SsmlBuilder Sentence(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The raw sentence text to insert into the speak tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SsmlLib.SsmlBuilder.html">SsmlBuilder</a></td>
+        <td><p>Returns <code>this</code> SSMLBuilder instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder_ToString.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L216">View Source</a>
+  </span>
+  <a id="SsmlLib_SsmlBuilder_ToString_" data-uid="SsmlLib.SsmlBuilder.ToString*"></a>
+  <h4 id="SsmlLib_SsmlBuilder_ToString" data-uid="SsmlLib.SsmlBuilder.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Creates and returns an equivalent SSML string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>An SSML string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/new/master/apiSpec/new?filename=SsmlLib_SsmlBuilder.md&amp;value=---%0Auid%3A%20SsmlLib.SsmlBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/KeltonKarboviak/SsmlLibraries/blob/master/SsmlLib/SsmlBuilder.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
